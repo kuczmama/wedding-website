@@ -234,13 +234,28 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
+    <script>
+        var tid = setInterval(function() {
+            if (document.readyState !== 'complete') return;
+            clearInterval(tid);
+            let rsvpForm = document.getElementById('rsvp-form');
+
+            rsvpForm.onsubmit = (e) => {
+                e.preventDefault();
+                e.target.submit();
+                window.location.href = "markaya.com";
+            }
+          }, 100);
+
+  
+    </script>
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h3>What are you waiting for?</h3>
                 <p>We would greatly appreciate if you could RSVP before 1st of November '19</p>
                 <form id="rsvp-form" class="rsvp-form"
-                      action=""
+                     action='https://script.google.com/macros/s/AKfycbz3VSRHY4GSBXWUr0DDprKfVwVutVtySlvoDI-s/exec'
                       method="POST">
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
@@ -310,7 +325,6 @@
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
-<script src="js/scripts.js"></script>
 <!-- Google Analytics -->
 <script>
     (function (i, s, o, g, r, a, m) {
